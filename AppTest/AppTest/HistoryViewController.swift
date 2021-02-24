@@ -94,11 +94,8 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     //MARK: -时间戳转时间函数
     func timeStampToString(timeStamp: Double, outputFormatter: String)->String {
-       //时间戳为毫秒级要／1000 (13位数)， 秒就不用除1000（10位数），参数带没带000
         let timeSta:TimeInterval
-
         timeSta = TimeInterval(timeStamp)
-        
         let date = NSDate(timeIntervalSince1970: timeSta)
         let dfmatter = DateFormatter()
         //设定时间格式,这里可以设置成自己需要的格式yyyy-MM-dd HH:mm:ss
